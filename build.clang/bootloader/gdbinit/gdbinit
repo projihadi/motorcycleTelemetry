@@ -1,0 +1,2 @@
+source /home/omer/dev/motorcycle/build.clang/bootloader/gdbinit/symbols
+source /home/omer/dev/motorcycle/build.clang/bootloader/gdbinit/connect

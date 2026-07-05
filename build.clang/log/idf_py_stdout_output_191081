@@ -1,0 +1,4 @@
+Command: cmake -G Ninja -B /home/omer/dev/motorcycle/build.clang -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/omer/.espressif/python_env/idf6.0_py3.14_env/bin/python -DESP_PLATFORM=1 -DIDF_TOOLCHAIN=clang -DCCACHE_ENABLE=False /home/omer/dev/motorcycle
+-- Component directory /opt/esp-idf/components/mqtt does not contain a CMakeLists.txt file. No component will be added
+-- Minimal build - OFF
+-- Configuring incomplete, errors occurred!

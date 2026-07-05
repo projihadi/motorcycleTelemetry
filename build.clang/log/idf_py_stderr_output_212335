@@ -1,0 +1,56 @@
+Command: cmake -G Ninja -B /home/omer/dev/motorcycle/build.clang -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/omer/.espressif/python_env/idf6.0_py3.14_env/bin/python -DESP_PLATFORM=1 -DIDF_TOOLCHAIN=clang -DCCACHE_ENABLE=False /home/omer/dev/motorcycle
+Configuration Report                                                                     
+ ─────────────────────────────────────────────────────────────────────────────────────── 
+   Parser Version: 1                                                                     
+   Verbosity: default                                                                    
+   Defaults policy: sdkconfig                                                            
+   Status: Finished with notifications                                                   
+                                                                                         
+  Miscellaneous                                                                          
+   ───────────────────────────────────────────────────────────────────────────────────   
+    * BT_NIMBLE_MESH_PROVISIONER (defined at                                             
+    /opt/esp-idf/components/bt/host/nimble/Kconfig.in:1421): 'default 0' is not a        
+    valid bool value (only 'y' and 'n' are allowed). Value is treated as 'n'.            
+    * BTDM_CTRL_LEGACY_AUTH_VENDOR_EVT_EFF (defined at                                   
+    /opt/esp-idf/components/bt/controller/esp32/Kconfig.in:177): 'default 0' is not a    
+    valid bool value (only 'y' and 'n' are allowed). Value is treated as 'n'.            
+    * FATFS_PRINT_LLI (defined at /opt/esp-idf/components/fatfs/Kconfig:230):            
+    'default 0' is not a valid bool value (only 'y' and 'n' are allowed). Value is       
+    treated as 'n'.                                                                      
+    * FATFS_PRINT_FLOAT (defined at /opt/esp-idf/components/fatfs/Kconfig:235):          
+    'default 0' is not a valid bool value (only 'y' and 'n' are allowed). Value is       
+    treated as 'n'.                                                                      
+    * Choice LIBC has LIBC_PICOLIBC as default selection, but given symbol is not        
+    visible. Ignoring.                                                                   
+    * Choice LIBC has no valid sdkconfig selection set to y. Will use Kconfig default    
+    selection LIBC_NEWLIB.                                                               
+   ───────────────────────────────────────────────────────────────────────────────────   
+  Default Value Mismatch                                                                 
+   ───────────────────────────────────────────────────────────────────────────────────   
+    Using sdkconfig default values                                                       
+    Choice symbols with different default selection between sdkconfig and Kconfig        
+    COMPILER_RT_LIB: Kconfig default selection: COMPILER_RT_LIB_CLANGRT, sdkconfig       
+    default selection: COMPILER_RT_LIB_GCCLIB                                            
+   ───────────────────────────────────────────────────────────────────────────────────   
+  Multiple Assignments                                                                   
+   ───────────────────────────────────────                                               
+    Choice LIBC:                                                                         
+        LIBC_NEWLIB (default selection)                                                  
+        LIBC_PICOLIBC (default selection)                                                
+        -> using LIBC_NEWLIB                                                             
+   ───────────────────────────────────────                                               
+ ─────────────────────────────────────────────────────────────────────────────────────── 
+CMake Warning at /opt/esp-idf/components/esp_common/project_include.cmake:16 (message):
+  Building ESP-IDF with clang is an experimental feature and is not yet
+  officially supported.
+Call Stack (most recent call first):
+  /opt/esp-idf/tools/cmake/build.cmake:519 (include)
+  /opt/esp-idf/tools/cmake/build.cmake:793 (__build_process_project_includes)
+  /opt/esp-idf/tools/cmake/project.cmake:773 (idf_build_process)
+  CMakeLists.txt:6 (project)
+
+
+fatal: detected dubious ownership in repository at '/opt/esp-idf/components/openthread/openthread'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /opt/esp-idf/components/openthread/openthread

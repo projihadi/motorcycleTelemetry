@@ -1,0 +1,27 @@
+dependencies:
+  idf:
+    source:
+      type: idf
+    version: 6.0.1
+  lovyangfx:
+    component_hash: fbe626fb4accc0ff720fd1f67616a4e7e3ffe70c263f6f59ec646f2ed27c5950
+    dependencies: []
+    source:
+      git: https://github.com/lovyan03/LovyanGFX.git
+      path: .
+      type: git
+    version: e21afa7c8772aa02fd0332bf7a446b9fcada81db
+  lvgl/lvgl:
+    component_hash: 184e532558c1c45fefed631f3e235423d22582aafb4630f3e8885c35281a49ae
+    dependencies: []
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 9.5.0
+direct_dependencies:
+- idf
+- lovyangfx
+- lvgl/lvgl
+manifest_hash: f49b3a9d56c20d6335c6e6982db196128d7b7b38088f71ffca41cb7e4772e11e
+target: esp32s3
+version: 3.0.0

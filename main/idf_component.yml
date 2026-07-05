@@ -1,0 +1,8 @@
+## IDF Component Manager Manifest File
+dependencies:
+  ## Required IDF version
+  idf:
+    version: ">=4.1.0"
+  lvgl/lvgl: "*"
+  lovyangfx:
+    git: https://github.com/lovyan03/LovyanGFX.git
