@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "motorcycle",
-    "project_version":    "e1f521d-dirty",
+    "project_version":    "a60807c0-dirty",
     "project_path":       "/home/omer/dev/motorcycle",
     "idf_path":           "/opt/esp-idf",
     "build_dir":          "/home/omer/dev/motorcycle/build",

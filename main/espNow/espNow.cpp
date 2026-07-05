@@ -44,6 +44,8 @@ void initWifi(void) {
   ESP_ERROR_CHECK(esp_wifi_set_storage(WIFI_STORAGE_RAM));
   ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
   ESP_ERROR_CHECK(esp_wifi_start());
+  ESP_ERROR_CHECK(esp_wifi_set_mac(WIFI_IF_STA, mac));
+  ESP_ERROR_CHECK(esp_wifi_set_channel(1, WIFI_SECOND_CHAN_NONE));
   ESP_ERROR_CHECK(esp_now_init());
 
   ESP_ERROR_CHECK(esp_now_register_recv_cb(onDataRecieved));
