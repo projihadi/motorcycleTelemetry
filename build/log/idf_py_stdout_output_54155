@@ -1,0 +1,536 @@
+Command: ninja all
+[0/1] Re-running CMake...
+-- Component directory /opt/esp-idf/components/mqtt does not contain a CMakeLists.txt file. No component will be added
+-- Minimal build - OFF
+-- Building ESP-IDF components for target esp32s3
+NOTICE: Processing 3 dependencies:
+NOTICE: [1/3] lovyangfx (e21afa7c8772aa02fd0332bf7a446b9fcada81db)
+NOTICE: [2/3] lvgl/lvgl (9.5.0)
+NOTICE: [3/3] idf (6.0.1)
+-- LovyanGFX use components = nvs_flash;efuse;esp_lcd;driver;esp_timer;esp_mm;esp_driver_ledc;esp_driver_i2s;hal
+-- ESP-TEE is currently supported only on the esp32c6;esp32h2;esp32c5;esp32c61 SoCs
+-- KCONFIG_REPORT_VERBOSITY not set, using default
+-- Project sdkconfig file /home/omer/dev/motorcycle/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- App "motorcycle" version: e1f521d-dirty
+-- Setting up mbedtls configuration
+-- Linkage type is PUBLIC
+-- Adding linker script /opt/esp-idf/components/esp_hal_wdt/esp32s3/rom.wdt.ld
+-- Adding linker script /opt/esp-idf/components/esp_system/ld/esp32s3/memory.ld.in
+--   -> Preprocessing .in script: /opt/esp-idf/components/esp_system/ld/esp32s3/memory.ld.in
+-- Adding linker script /opt/esp-idf/components/esp_system/ld/esp32s3/sections.ld.in
+--   -> Preprocessing .in script: /opt/esp-idf/components/esp_system/ld/esp32s3/sections.ld.in
+--   -> Applying ldgen processing: /home/omer/dev/motorcycle/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /opt/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script /opt/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script /opt/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.bt_funcs.ld
+-- Adding linker script /opt/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script /opt/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script /opt/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_master.ld
+-- Adding linker script /opt/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_50.ld
+-- Adding linker script /opt/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_smp.ld
+-- Adding linker script /opt/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_dtm.ld
+-- Adding linker script /opt/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_test.ld
+-- Adding linker script /opt/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_scan.ld
+-- Adding linker script /opt/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libc.ld
+-- Adding linker script /opt/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- LovyanGFX use components = nvs_flash;efuse;esp_lcd;driver;esp_timer;esp_mm;esp_driver_ledc;esp_driver_i2s;hal
+-- Component idf::esp_trace will be linked with -Wl,--whole-archive
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_blockdev esp_blockdev_util esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_bitscrambler esp_driver_cam esp_driver_dac esp_driver_dma esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_i3c esp_driver_isp esp_driver_jpeg esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_ppa esp_driver_rmt esp_driver_sd_intf esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_touch_sens esp_driver_tsens esp_driver_twai esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hal_ana_cmpr esp_hal_ana_conv esp_hal_cam esp_hal_clock esp_hal_dma esp_hal_gpio esp_hal_gpspi esp_hal_i2c esp_hal_i2s esp_hal_ieee802154 esp_hal_jpeg esp_hal_lcd esp_hal_ledc esp_hal_mcpwm esp_hal_mspi esp_hal_parlio esp_hal_pcnt esp_hal_pmu esp_hal_ppa esp_hal_rmt esp_hal_rtc_timer esp_hal_sd esp_hal_security esp_hal_timg esp_hal_touch_sens esp_hal_twai esp_hal_uart esp_hal_usb esp_hal_wdt esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_libc esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_security esp_stdio esp_system esp_timer esp_trace esp_usb_cdc_rom_console esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 log lovyangfx lvgl__lvgl lwip main mbedtls nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread rt sdmmc soc spi_flash spiffs tcp_transport ulp unity vfs wear_levelling wpa_supplicant xtensa
+-- Component paths: /opt/esp-idf/components/app_trace /opt/esp-idf/components/app_update /opt/esp-idf/components/bootloader /opt/esp-idf/components/bootloader_support /opt/esp-idf/components/bt /opt/esp-idf/components/cmock /opt/esp-idf/components/console /opt/esp-idf/components/cxx /opt/esp-idf/components/driver /opt/esp-idf/components/efuse /opt/esp-idf/components/esp-tls /opt/esp-idf/components/esp_adc /opt/esp-idf/components/esp_app_format /opt/esp-idf/components/esp_blockdev /opt/esp-idf/components/esp_blockdev_util /opt/esp-idf/components/esp_bootloader_format /opt/esp-idf/components/esp_coex /opt/esp-idf/components/esp_common /opt/esp-idf/components/esp_driver_ana_cmpr /opt/esp-idf/components/esp_driver_bitscrambler /opt/esp-idf/components/esp_driver_cam /opt/esp-idf/components/esp_driver_dac /opt/esp-idf/components/esp_driver_dma /opt/esp-idf/components/esp_driver_gpio /opt/esp-idf/components/esp_driver_gptimer /opt/esp-idf/components/esp_driver_i2c /opt/esp-idf/components/esp_driver_i2s /opt/esp-idf/components/esp_driver_i3c /opt/esp-idf/components/esp_driver_isp /opt/esp-idf/components/esp_driver_jpeg /opt/esp-idf/components/esp_driver_ledc /opt/esp-idf/components/esp_driver_mcpwm /opt/esp-idf/components/esp_driver_parlio /opt/esp-idf/components/esp_driver_pcnt /opt/esp-idf/components/esp_driver_ppa /opt/esp-idf/components/esp_driver_rmt /opt/esp-idf/components/esp_driver_sd_intf /opt/esp-idf/components/esp_driver_sdio /opt/esp-idf/components/esp_driver_sdm /opt/esp-idf/components/esp_driver_sdmmc /opt/esp-idf/components/esp_driver_sdspi /opt/esp-idf/components/esp_driver_spi /opt/esp-idf/components/esp_driver_touch_sens /opt/esp-idf/components/esp_driver_tsens /opt/esp-idf/components/esp_driver_twai /opt/esp-idf/components/esp_driver_uart /opt/esp-idf/components/esp_driver_usb_serial_jtag /opt/esp-idf/components/esp_eth /opt/esp-idf/components/esp_event /opt/esp-idf/components/esp_gdbstub /opt/esp-idf/components/esp_hal_ana_cmpr /opt/esp-idf/components/esp_hal_ana_conv /opt/esp-idf/components/esp_hal_cam /opt/esp-idf/components/esp_hal_clock /opt/esp-idf/components/esp_hal_dma /opt/esp-idf/components/esp_hal_gpio /opt/esp-idf/components/esp_hal_gpspi /opt/esp-idf/components/esp_hal_i2c /opt/esp-idf/components/esp_hal_i2s /opt/esp-idf/components/esp_hal_ieee802154 /opt/esp-idf/components/esp_hal_jpeg /opt/esp-idf/components/esp_hal_lcd /opt/esp-idf/components/esp_hal_ledc /opt/esp-idf/components/esp_hal_mcpwm /opt/esp-idf/components/esp_hal_mspi /opt/esp-idf/components/esp_hal_parlio /opt/esp-idf/components/esp_hal_pcnt /opt/esp-idf/components/esp_hal_pmu /opt/esp-idf/components/esp_hal_ppa /opt/esp-idf/components/esp_hal_rmt /opt/esp-idf/components/esp_hal_rtc_timer /opt/esp-idf/components/esp_hal_sd /opt/esp-idf/components/esp_hal_security /opt/esp-idf/components/esp_hal_timg /opt/esp-idf/components/esp_hal_touch_sens /opt/esp-idf/components/esp_hal_twai /opt/esp-idf/components/esp_hal_uart /opt/esp-idf/components/esp_hal_usb /opt/esp-idf/components/esp_hal_wdt /opt/esp-idf/components/esp_hid /opt/esp-idf/components/esp_http_client /opt/esp-idf/components/esp_http_server /opt/esp-idf/components/esp_https_ota /opt/esp-idf/components/esp_https_server /opt/esp-idf/components/esp_hw_support /opt/esp-idf/components/esp_lcd /opt/esp-idf/components/esp_libc /opt/esp-idf/components/esp_local_ctrl /opt/esp-idf/components/esp_mm /opt/esp-idf/components/esp_netif /opt/esp-idf/components/esp_netif_stack /opt/esp-idf/components/esp_partition /opt/esp-idf/components/esp_phy /opt/esp-idf/components/esp_pm /opt/esp-idf/components/esp_psram /opt/esp-idf/components/esp_ringbuf /opt/esp-idf/components/esp_rom /opt/esp-idf/components/esp_security /opt/esp-idf/components/esp_stdio /opt/esp-idf/components/esp_system /opt/esp-idf/components/esp_timer /opt/esp-idf/components/esp_trace /opt/esp-idf/components/esp_usb_cdc_rom_console /opt/esp-idf/components/esp_wifi /opt/esp-idf/components/espcoredump /opt/esp-idf/components/esptool_py /opt/esp-idf/components/fatfs /opt/esp-idf/components/freertos /opt/esp-idf/components/hal /opt/esp-idf/components/heap /opt/esp-idf/components/http_parser /opt/esp-idf/components/idf_test /opt/esp-idf/components/ieee802154 /opt/esp-idf/components/log /home/omer/dev/motorcycle/managed_components/lovyangfx /home/omer/dev/motorcycle/managed_components/lvgl__lvgl /opt/esp-idf/components/lwip /home/omer/dev/motorcycle/main /opt/esp-idf/components/mbedtls /opt/esp-idf/components/nvs_flash /opt/esp-idf/components/nvs_sec_provider /opt/esp-idf/components/openthread /opt/esp-idf/components/partition_table /opt/esp-idf/components/perfmon /opt/esp-idf/components/protobuf-c /opt/esp-idf/components/protocomm /opt/esp-idf/components/pthread /opt/esp-idf/components/rt /opt/esp-idf/components/sdmmc /opt/esp-idf/components/soc /opt/esp-idf/components/spi_flash /opt/esp-idf/components/spiffs /opt/esp-idf/components/tcp_transport /opt/esp-idf/components/ulp /opt/esp-idf/components/unity /opt/esp-idf/components/vfs /opt/esp-idf/components/wear_levelling /opt/esp-idf/components/wpa_supplicant /opt/esp-idf/components/xtensa
+-- Configuring done (39.5s)
+-- Generating done (1.9s)
+-- Build files have been written to: /home/omer/dev/motorcycle/build
+[1/14] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/espNow/espNow.cpp.obj
+/home/omer/dev/motorcycle/main/espNow/espNow.cpp:11:20: warning: 'TAG' defined but not used [-Wunused-variable]
+   11 | static const char* TAG = "Wifi";
+      |                    ^~~
+[2/14] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/types.cpp.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/types.cpp.obj 
+/home/omer/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++ -DESP_PLATFORM -DESP_PSA_ITS_AVAILABLE -DIDF_VER=\"v6.0.1-dirty\" -DLV_CONF_INCLUDE_SIMPLE -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DMBEDTLS_MAJOR_VERSION=4 -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DTF_PSA_CRYPTO_USER_CONFIG_FILE=\"mbedtls/esp_config.h\" -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/omer/dev/motorcycle/build/config -I/home/omer/dev/motorcycle/main -I/home/omer/dev/motorcycle/main/lvgl -I/home/omer/dev/motorcycle/main/UI -I/home/omer/dev/motorcycle/main/espNow -I/opt/esp-idf/components/esp_libc/platform_include -I/opt/esp-idf/components/freertos/config/include -I/opt/esp-idf/components/freertos/config/include/freertos -I/opt/esp-idf/components/freertos/config/xtensa/include -I/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/opt/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/opt/esp-idf/components/freertos/esp_additions/include -I/opt/esp-idf/components/esp_hw_support/include -I/opt/esp-idf/components/esp_hw_support/include/soc -I/opt/esp-idf/components/esp_hw_support/ldo/include -I/opt/esp-idf/components/esp_hw_support/debug_probe/include -I/opt/esp-idf/components/esp_hw_support/etm/include -I/opt/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/opt/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/opt/esp-idf/components/esp_hw_support/power_supply/include -I/opt/esp-idf/components/esp_hw_support/modem/include -I/opt/esp-idf/components/esp_hw_support/include/soc/esp32s3 -I/opt/esp-idf/components/esp_hw_support/port/esp32s3/. -I/opt/esp-idf/components/esp_hw_support/port/esp32s3/include -I/opt/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/. -I/opt/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/include -I/opt/esp-idf/components/heap/include -I/opt/esp-idf/components/heap/tlsf -I/opt/esp-idf/components/log/include -I/opt/esp-idf/components/soc/include -I/opt/esp-idf/components/soc/esp32s3 -I/opt/esp-idf/components/soc/esp32s3/include -I/opt/esp-idf/components/soc/esp32s3/register -I/opt/esp-idf/components/hal/platform_port/include -I/opt/esp-idf/components/hal/esp32s3/include -I/opt/esp-idf/components/hal/include -I/opt/esp-idf/components/esp_rom/include -I/opt/esp-idf/components/esp_rom/esp32s3/include -I/opt/esp-idf/components/esp_rom/esp32s3/include/esp32s3 -I/opt/esp-idf/components/esp_rom/esp32s3 -I/opt/esp-idf/components/esp_common/include -I/opt/esp-idf/components/esp_system/include -I/opt/esp-idf/components/esp_system/port/soc -I/opt/esp-idf/components/esp_system/port/include/private -I/opt/esp-idf/components/esp_stdio/include -I/opt/esp-idf/components/xtensa/esp32s3/include -I/opt/esp-idf/components/xtensa/include -I/opt/esp-idf/components/xtensa/deprecated_include -I/opt/esp-idf/components/esp_hal_gpio/include -I/opt/esp-idf/components/esp_hal_gpio/esp32s3/include -I/opt/esp-idf/components/esp_hal_usb/include -I/opt/esp-idf/components/esp_hal_usb/esp32s3/include -I/opt/esp-idf/components/esp_hal_pmu/include -I/opt/esp-idf/components/esp_hal_pmu/esp32s3/include -I/opt/esp-idf/components/esp_hal_ana_conv/include -I/opt/esp-idf/components/esp_hal_ana_conv/esp32s3/include -I/opt/esp-idf/components/esp_hal_dma/include -I/opt/esp-idf/components/esp_hal_dma/esp32s3/include -I/opt/esp-idf/components/lwip/include -I/opt/esp-idf/components/lwip/include/apps -I/opt/esp-idf/components/lwip/lwip/src/include -I/opt/esp-idf/components/lwip/port/include -I/opt/esp-idf/components/lwip/port/freertos/include -I/opt/esp-idf/components/lwip/port/esp32xx/include -I/opt/esp-idf/components/lwip/port/esp32xx/include/arch -I/opt/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/omer/dev/motorcycle/managed_components/lovyangfx/src -I/opt/esp-idf/components/nvs_flash/include -I/opt/esp-idf/components/esp_partition/include -I/opt/esp-idf/components/esp_blockdev/include -I/opt/esp-idf/components/efuse/include -I/opt/esp-idf/components/efuse/esp32s3/include -I/opt/esp-idf/components/esp_lcd/include -I/opt/esp-idf/components/esp_lcd/interface -I/opt/esp-idf/components/esp_lcd/rgb/include -I/opt/esp-idf/components/esp_driver_gpio/include -I/opt/esp-idf/components/esp_driver_i2c/include -I/opt/esp-idf/components/esp_hal_i2c/esp32s3/include -I/opt/esp-idf/components/esp_hal_i2c/include -I/opt/esp-idf/components/esp_driver_spi/include -I/opt/esp-idf/components/esp_pm/include -I/opt/esp-idf/components/esp_hal_gpspi/include -I/opt/esp-idf/components/esp_hal_gpspi/esp32s3/include -I/opt/esp-idf/components/esp_driver_dma/include -I/opt/esp-idf/components/esp_driver_parlio/include -I/opt/esp-idf/components/esp_hal_parlio/include -I/opt/esp-idf/components/esp_hal_lcd/include -I/opt/esp-idf/components/esp_hal_lcd/esp32s3/include -I/opt/esp-idf/components/driver/i2c/include -I/opt/esp-idf/components/driver/touch_sensor/include -I/opt/esp-idf/components/driver/twai/include -I/opt/esp-idf/components/driver/touch_sensor/esp32s3/include -I/opt/esp-idf/components/esp_hal_twai/include -I/opt/esp-idf/components/esp_hal_twai/esp32s3/include -I/opt/esp-idf/components/esp_hal_touch_sens/esp32s3/include -I/opt/esp-idf/components/esp_hal_touch_sens/include -I/opt/esp-idf/components/esp_timer/include -I/opt/esp-idf/components/esp_mm/include -I/opt/esp-idf/components/esp_driver_ledc/include -I/opt/esp-idf/components/esp_hal_ledc/include -I/opt/esp-idf/components/esp_hal_ledc/esp32s3/include -I/opt/esp-idf/components/esp_driver_i2s/include -I/opt/esp-idf/components/esp_hal_i2s/include -I/opt/esp-idf/components/esp_hal_i2s/esp32s3/include -I/home/omer/dev/motorcycle/managed_components/lvgl__lvgl -I/home/omer/dev/motorcycle/managed_components/lvgl__lvgl/src -I/home/omer/dev/motorcycle/managed_components -I/home/omer/dev/motorcycle/managed_components/lvgl__lvgl/examples -I/home/omer/dev/motorcycle/managed_components/lvgl__lvgl/demos -I/opt/esp-idf/components/esp_hal_clock/include -I/opt/esp-idf/components/esp_hal_clock/esp32s3/include -I/opt/esp-idf/components/esp_hal_mspi/include -I/opt/esp-idf/components/esp_hal_mspi/esp32s3/include -I/opt/esp-idf/components/esp_hal_security/esp32s3/include -I/opt/esp-idf/components/esp_hal_security/include -I/opt/esp-idf/components/esp_app_format/include -I/opt/esp-idf/components/esp_bootloader_format/include -I/opt/esp-idf/components/app_update/include -I/opt/esp-idf/components/bootloader_support/include -I/opt/esp-idf/components/bootloader_support/bootloader_flash/include -I/opt/esp-idf/components/esp_security/include -I/opt/esp-idf/components/esp_hal_uart/include -I/opt/esp-idf/components/esp_hal_uart/esp32s3/include -I/opt/esp-idf/components/mbedtls/port/include -I/opt/esp-idf/components/mbedtls/mbedtls/include -I/opt/esp-idf/components/mbedtls/mbedtls/library -I/opt/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/core -I/opt/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src -I/opt/esp-idf/components/mbedtls/esp_crt_bundle/include -I/opt/esp-idf/components/mbedtls/port/psa_driver/include -I/opt/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/include -I/opt/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/include -I/opt/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/everest/include -I/opt/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/p256-m -I/opt/esp-idf/components/esp_hal_timg/include -I/opt/esp-idf/components/esp_hal_timg/esp32s3/include -I/opt/esp-idf/components/esp_hal_wdt/include -I/opt/esp-idf/components/esp_hal_wdt/esp32s3/include -I/opt/esp-idf/components/esp_hal_rtc_timer/include -I/opt/esp-idf/components/esp_hal_rtc_timer/esp32s3/include -I/opt/esp-idf/components/spi_flash/include -I/opt/esp-idf/components/esp_usb_cdc_rom_console/include -I/opt/esp-idf/components/pthread/include -I/opt/esp-idf/components/esp_ringbuf/include -I/opt/esp-idf/components/esp_psram/include -I/opt/esp-idf/components/esp_psram/xip_impl/include -I/opt/esp-idf/components/esp_driver_uart/include -I/opt/esp-idf/components/vfs/include -I/opt/esp-idf/components/esp_driver_gptimer/include -I/opt/esp-idf/components/app_trace/include -I/opt/esp-idf/components/esp_event/include -I/opt/esp-idf/components/nvs_sec_provider/include -I/opt/esp-idf/components/esp_phy/include -I/opt/esp-idf/components/esp_phy/esp32s3/include -I/opt/esp-idf/components/esp_driver_usb_serial_jtag/include -I/opt/esp-idf/components/esp_netif/include -I/opt/esp-idf/components/wpa_supplicant/include -I/opt/esp-idf/components/wpa_supplicant/port/include -I/opt/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/opt/esp-idf/components/esp_coex/include -I/opt/esp-idf/components/esp_wifi/include -I/opt/esp-idf/components/esp_wifi/include/local -I/opt/esp-idf/components/esp_wifi/wifi_apps/include -I/opt/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -I/opt/esp-idf/components/esp_gdbstub/include -I/opt/esp-idf/components/unity/include -I/opt/esp-idf/components/unity/unity/src -I/opt/esp-idf/components/cmock/CMock/src -I/opt/esp-idf/components/console -I/opt/esp-idf/components/http_parser -I/opt/esp-idf/components/esp-tls -I/opt/esp-idf/components/esp-tls/esp-tls-crypto -I/opt/esp-idf/components/esp_adc/include -I/opt/esp-idf/components/esp_adc/interface -I/opt/esp-idf/components/esp_adc/esp32s3/include -I/opt/esp-idf/components/esp_blockdev_util/include -I/opt/esp-idf/components/esp_hal_ana_cmpr/include -I/opt/esp-idf/components/esp_driver_ana_cmpr/include -I/opt/esp-idf/components/esp_driver_bitscrambler/include -I/opt/esp-idf/components/esp_hal_cam/include -I/opt/esp-idf/components/esp_hal_cam/esp32s3/include -I/opt/esp-idf/components/esp_driver_isp/include -I/opt/esp-idf/components/esp_driver_cam/include -I/opt/esp-idf/components/esp_driver_cam/interface -I/opt/esp-idf/components/esp_driver_cam/dvp/include -I/opt/esp-idf/components/esp_driver_dac/include -I/opt/esp-idf/components/esp_driver_i3c/include -I/opt/esp-idf/components/esp_hal_jpeg/include -I/opt/esp-idf/components/esp_driver_jpeg/include -I/opt/esp-idf/components/esp_hal_mcpwm/include -I/opt/esp-idf/components/esp_hal_mcpwm/esp32s3/include -I/opt/esp-idf/components/esp_driver_mcpwm/include -I/opt/esp-idf/components/esp_hal_pcnt/include -I/opt/esp-idf/components/esp_hal_pcnt/esp32s3/include -I/opt/esp-idf/components/esp_driver_pcnt/include -I/opt/esp-idf/components/esp_hal_ppa/include -I/opt/esp-idf/components/esp_driver_ppa/include -I/opt/esp-idf/components/esp_hal_rmt/include -I/opt/esp-idf/components/esp_hal_rmt/esp32s3/include -I/opt/esp-idf/components/esp_driver_rmt/include -I/opt/esp-idf/components/esp_hal_sd/include -I/opt/esp-idf/components/esp_hal_sd/esp32s3/include -I/opt/esp-idf/components/sdmmc/include -I/opt/esp-idf/components/esp_driver_sd_intf/include -I/opt/esp-idf/components/esp_driver_sdio/include -I/opt/esp-idf/components/esp_driver_sdm/include -I/opt/esp-idf/components/esp_driver_sdmmc/include -I/opt/esp-idf/components/esp_driver_sdmmc/legacy/include -I/opt/esp-idf/components/esp_driver_sdspi/include -I/opt/esp-idf/components/esp_driver_touch_sens/include -I/opt/esp-idf/components/esp_driver_touch_sens/hw_ver2/include -I/opt/esp-idf/components/esp_driver_tsens/include -I/opt/esp-idf/components/esp_driver_twai/include -I/opt/esp-idf/components/esp_eth/include -I/opt/esp-idf/components/esp_hal_ieee802154/include -I/opt/esp-idf/components/esp_hid/include -I/opt/esp-idf/components/tcp_transport/include -I/opt/esp-idf/components/esp_http_client/include -I/opt/esp-idf/components/esp_http_server/include -I/opt/esp-idf/components/esp_https_ota/include -I/opt/esp-idf/components/esp_https_server/include -I/opt/esp-idf/components/protobuf-c/protobuf-c -I/opt/esp-idf/components/protocomm/include/common -I/opt/esp-idf/components/protocomm/include/security -I/opt/esp-idf/components/protocomm/include/transports -I/opt/esp-idf/components/protocomm/include/crypto/srp6a -I/opt/esp-idf/components/protocomm/proto-c -I/opt/esp-idf/components/esp_local_ctrl/include -I/opt/esp-idf/components/esp_trace/include -I/opt/esp-idf/components/wear_levelling/include -I/opt/esp-idf/components/fatfs/diskio -I/opt/esp-idf/components/fatfs/src -I/opt/esp-idf/components/fatfs/vfs -I/opt/esp-idf/components/idf_test/include -I/opt/esp-idf/components/idf_test/include/esp32s3 -I/opt/esp-idf/components/ieee802154/include -I/opt/esp-idf/components/perfmon/include -I/opt/esp-idf/components/rt/include -I/opt/esp-idf/components/spiffs/include @"/home/omer/dev/motorcycle/build/toolchain/cxxflags" -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/omer/dev/motorcycle=. -fmacro-prefix-map=/opt/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu++26 -fno-exceptions -fuse-cxa-atexit -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/types.cpp.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/types.cpp.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/types.cpp.obj -c /home/omer/dev/motorcycle/main/types.cpp
+In file included from /home/omer/dev/motorcycle/main/types.hpp:2,
+                 from /home/omer/dev/motorcycle/main/types.cpp:1:
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:38:6: error: #error "include FreeRTOS.h" must appear in source files before "include queue.h"
+   38 |     #error "include FreeRTOS.h" must appear in source files before "include queue.h"
+      |      ^~~~~
+In file included from /opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:47:
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:38:6: error: #error "include FreeRTOS.h must appear in source files before include task.h"
+   38 |     #error "include FreeRTOS.h must appear in source files before include task.h"
+      |      ^~~~~
+In file included from /opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:41:
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:66:6: error: #error "FreeRTOS.h must be included before list.h"
+   66 |     #error "FreeRTOS.h must be included before list.h"
+      |      ^~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:151:25: error: 'TickType_t' does not name a type
+  151 |     configLIST_VOLATILE TickType_t xItemValue;          /*< The value being listed.  In most cases this is used to sort the list in ascending order. */
+      |                         ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:179:14: error: 'UBaseType_t' does not name a type
+  179 |     volatile UBaseType_t uxNumberOfItems;
+      |              ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:437:47: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  437 | void vListInitialise( List_t * const pxList ) PRIVILEGED_FUNCTION;
+      |                                               ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:448:55: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  448 | void vListInitialiseItem( ListItem_t * const pxItem ) PRIVILEGED_FUNCTION;
+      |                                                       ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:462:54: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  462 |                   ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+      |                                                      ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:484:57: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  484 |                      ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+      |                                                         ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:499:1: error: 'UBaseType_t' does not name a type
+  499 | UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:99:9: error: ISO C++ forbids declaration of 'BaseType_t' with no type [-fpermissive]
+   99 | typedef BaseType_t (* TaskHookFunction_t)( void * );
+      |         ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:99:9: error: typedef 'BaseType_t' is initialized (use 'decltype' instead)
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:99:23: error: 'TaskHookFunction_t' was not declared in this scope
+   99 | typedef BaseType_t (* TaskHookFunction_t)( void * );
+      |                       ^~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:129:5: error: 'BaseType_t' does not name a type
+  129 |     BaseType_t xOverflowCount;
+      |     ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:130:5: error: 'TickType_t' does not name a type
+  130 |     TickType_t xTimeOnEntering;
+      |     ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:139:5: error: 'uint32_t' does not name a type
+  139 |     uint32_t ulLengthInBytes;
+      |     ^~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:42:1: note: 'uint32_t' is defined in header '<cstdint>'; this is probably fixable by adding '#include <cstdint>'
+   41 | #include "list.h"
+  +++ |+#include <cstdint>
+   42 | 
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:140:5: error: 'uint32_t' does not name a type
+  140 |     uint32_t ulParameters;
+      |     ^~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:140:5: note: 'uint32_t' is defined in header '<cstdint>'; this is probably fixable by adding '#include <cstdint>'
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:148:5: error: 'TaskFunction_t' does not name a type
+  148 |     TaskFunction_t pvTaskCode;
+      |     ^~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:150:5: error: 'configSTACK_DEPTH_TYPE' does not name a type
+  150 |     configSTACK_DEPTH_TYPE usStackDepth;
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:152:5: error: 'UBaseType_t' does not name a type
+  152 |     UBaseType_t uxPriority;
+      |     ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:153:5: error: 'StackType_t' does not name a type
+  153 |     StackType_t * puxStackBuffer;
+      |     ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:154:30: error: 'portNUM_CONFIGURABLE_REGIONS' was not declared in this scope
+  154 |     MemoryRegion_t xRegions[ portNUM_CONFIGURABLE_REGIONS ];
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:168:5: error: 'UBaseType_t' does not name a type
+  168 |     UBaseType_t xTaskNumber;                      /**< A number unique to the task. */
+      |     ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:170:5: error: 'UBaseType_t' does not name a type
+  170 |     UBaseType_t uxCurrentPriority;                /**< The priority at which the task was running (may be inherited) when the structure was populated. */
+      |     ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:171:5: error: 'UBaseType_t' does not name a type
+  171 |     UBaseType_t uxBasePriority;                   /**< The priority to which the task will return if the task's current priority has been inherited to avoid unbounded priority inversion when obtaining a mutex.  Only valid if configUSE_MUTEXES is defined as 1 in FreeRTOSConfig.h. */
+      |     ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:172:5: error: 'configRUN_TIME_COUNTER_TYPE' does not name a type
+  172 |     configRUN_TIME_COUNTER_TYPE ulRunTimeCounter; /**< The total run time allocated to the task so far, as defined by the run time stats clock.  See https://www.FreeRTOS.org/rtos-run-time-stats.html.  Only valid when configGENERATE_RUN_TIME_STATS is defined as 1 in FreeRTOSConfig.h. */
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:173:5: error: 'StackType_t' does not name a type
+  173 |     StackType_t * pxStackBase;                    /**< Points to the lowest address of the task's stack area. */
+      |     ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:178:5: error: 'configSTACK_DEPTH_TYPE' does not name a type
+  178 |     configSTACK_DEPTH_TYPE usStackHighWaterMark;  /**< The minimum amount of stack space that has remained for the task since the task was created.  The closer this value is to zero the closer the task has come to overflowing its stack. */
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:747:72: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  747 |                               const MemoryRegion_t * const pxRegions ) PRIVILEGED_FUNCTION;
+      |                                                                        ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:785:48: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  785 | void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+      |                                                ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:834:24: error: 'TickType_t' does not name a type
+  834 | void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;
+      |                        ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:834:51: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  834 | void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:896:1: error: 'BaseType_t' does not name a type
+  896 | BaseType_t xTaskDelayUntil( TickType_t * const pxPreviousWakeTime,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:938:1: error: 'BaseType_t' does not name a type
+  938 | BaseType_t xTaskAbortDelay( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:982:1: error: 'UBaseType_t' does not name a type
+  982 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:988:1: error: 'UBaseType_t' does not name a type
+  988 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1004:48: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1004 | eTaskState eTaskGetState( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1059:20: error: 'BaseType_t' has not been declared
+ 1059 |                    BaseType_t xGetFreeStackSpace,
+      |                    ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1060:40: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1060 |                    eTaskState eState ) PRIVILEGED_FUNCTION;
+      |                                        ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1100:24: error: 'UBaseType_t' has not been declared
+ 1100 |                        UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;
+      |                        ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1100:52: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1100 |                        UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;
+      |                                                    ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1148:50: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1148 | void vTaskSuspend( TaskHandle_t xTaskToSuspend ) PRIVILEGED_FUNCTION;
+      |                                                  ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1194:48: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1194 | void vTaskResume( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      |                                                ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1220:1: error: 'BaseType_t' does not name a type
+ 1220 | BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1252:34: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1252 | void vTaskStartScheduler( void ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1305:32: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1305 | void vTaskEndScheduler( void ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1355:30: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1355 | void vTaskSuspendAll( void ) PRIVILEGED_FUNCTION;
+      |                              ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1406:1: error: 'BaseType_t' does not name a type
+ 1406 | BaseType_t xTaskResumeAll( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1418:1: error: 'TickType_t' does not name a type
+ 1418 | TickType_t xTaskGetTickCount( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1431:1: error: 'TickType_t' does not name a type
+ 1431 | TickType_t xTaskGetTickCountFromISR( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1442:1: error: 'UBaseType_t' does not name a type
+ 1442 | UBaseType_t uxTaskGetNumberOfTasks( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1452:51: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1452 | char * pcTaskGetName( TaskHandle_t xTaskToQuery ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1465:59: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1465 | TaskHandle_t xTaskGetHandle( const char * pcNameToQuery ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                                           ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1513:1: error: 'UBaseType_t' does not name a type
+ 1513 | UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1538:1: error: 'configSTACK_DEPTH_TYPE' does not name a type
+ 1538 | configSTACK_DEPTH_TYPE uxTaskGetStackHighWaterMark2( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1641:1: error: 'BaseType_t' does not name a type
+ 1641 | BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1651:45: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1651 | TaskHandle_t xTaskGetIdleTaskHandle( void ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1750:1: error: 'UBaseType_t' does not name a type
+ 1750 | UBaseType_t uxTaskGetSystemState( TaskStatus_t * const pxTaskStatusArray,
+      | ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1798:40: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1798 | void vTaskList( char * pcWriteBuffer ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                        ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1849:51: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1849 | void vTaskGetRunTimeStats( char * pcWriteBuffer ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1886:1: error: 'configRUN_TIME_COUNTER_TYPE' does not name a type
+ 1886 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimeCounter( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1887:1: error: 'configRUN_TIME_COUNTER_TYPE' does not name a type
+ 1887 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimePercent( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1992:1: error: 'BaseType_t' does not name a type
+ 1992 | BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2136:1: error: 'BaseType_t' does not name a type
+ 2136 | BaseType_t xTaskGenericNotifyFromISR( TaskHandle_t xTaskToNotify,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2271:1: error: 'BaseType_t' does not name a type
+ 2271 | BaseType_t xTaskGenericNotifyWait( UBaseType_t uxIndexToWaitOn,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2428:37: error: 'UBaseType_t' has not been declared
+ 2428 |                                     UBaseType_t uxIndexToNotify,
+      |                                     ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2429:37: error: 'BaseType_t' has not been declared
+ 2429 |                                     BaseType_t * pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2429:78: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2429 |                                     BaseType_t * pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;
+      |                                                                              ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2527:1: error: 'uint32_t' does not name a type
+ 2527 | uint32_t ulTaskGenericNotifyTake( UBaseType_t uxIndexToWaitOn,
+      | ^~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2527:1: note: 'uint32_t' is defined in header '<cstdint>'; this is probably fixable by adding '#include <cstdint>'
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2586:1: error: 'BaseType_t' does not name a type
+ 2586 | BaseType_t xTaskGenericNotifyStateClear( TaskHandle_t xTask,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2644:1: error: 'uint32_t' does not name a type
+ 2644 | uint32_t ulTaskGenericNotifyValueClear( TaskHandle_t xTask,
+      | ^~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2644:1: note: 'uint32_t' is defined in header '<cstdint>'; this is probably fixable by adding '#include <cstdint>'
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2661:58: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2661 | void vTaskSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+      |                                                          ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2741:1: error: 'BaseType_t' does not name a type
+ 2741 | BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2765:1: error: 'BaseType_t' does not name a type
+ 2765 | BaseType_t xTaskCatchUpTicks( TickType_t xTicksToCatchUp ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2792:1: error: 'BaseType_t' does not name a type
+ 2792 | BaseType_t xTaskIncrementTick( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2826:35: error: 'TickType_t' does not name a type
+ 2826 |                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2826:61: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2826 |                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                             ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2828:44: error: 'TickType_t' does not name a type
+ 2828 |                                      const TickType_t xItemValue,
+      |                                            ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2829:44: error: 'TickType_t' does not name a type
+ 2829 |                                      const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                            ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2829:70: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2829 |                                      const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                                      ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2843:39: error: 'TickType_t' has not been declared
+ 2843 |                                       TickType_t xTicksToWait,
+      |                                       ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2844:45: error: 'BaseType_t' does not name a type
+ 2844 |                                       const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2844:76: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2844 |                                       const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+      |                                                                            ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2870:1: error: 'BaseType_t' does not name a type
+ 2870 | BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2872:47: error: 'TickType_t' does not name a type
+ 2872 |                                         const TickType_t xItemValue ) PRIVILEGED_FUNCTION;
+      |                                               ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2872:71: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2872 |                                         const TickType_t xItemValue ) PRIVILEGED_FUNCTION;
+      |                                                                       ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2882:1: error: 'portDONT_DISCARD' does not name a type
+ 2882 | portDONT_DISCARD void vTaskSwitchContext( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2888:1: error: 'TickType_t' does not name a type
+ 2888 | TickType_t uxTaskResetEventItemValue( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2893:48: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2893 | TaskHandle_t xTaskGetCurrentTaskHandle( void ) PRIVILEGED_FUNCTION;
+      |                                                ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2899:31: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2899 | void vTaskMissedYield( void ) PRIVILEGED_FUNCTION;
+      |                               ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2905:1: error: 'BaseType_t' does not name a type
+ 2905 | BaseType_t xTaskGetSchedulerState( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2911:1: error: 'BaseType_t' does not name a type
+ 2911 | BaseType_t xTaskPriorityInherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2917:1: error: 'BaseType_t' does not name a type
+ 2917 | BaseType_t xTaskPriorityDisinherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2928:43: error: 'UBaseType_t' has not been declared
+ 2928 |                                           UBaseType_t uxHighestPriorityWaitingTask ) PRIVILEGED_FUNCTION;
+      |                                           ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2928:86: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2928 |                                           UBaseType_t uxHighestPriorityWaitingTask ) PRIVILEGED_FUNCTION;
+      |                                                                                      ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2933:1: error: 'UBaseType_t' does not name a type
+ 2933 | UBaseType_t uxTaskGetTaskNumber( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2940:32: error: 'UBaseType_t' does not name a type
+ 2940 |                          const UBaseType_t uxHandle ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2940:55: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2940 |                          const UBaseType_t uxHandle ) PRIVILEGED_FUNCTION;
+      |                                                       ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2950:6: error: variable or field 'vTaskStepTick' declared void
+ 2950 | void vTaskStepTick( TickType_t xTicksToJump ) PRIVILEGED_FUNCTION;
+      |      ^~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2950:21: error: 'TickType_t' was not declared in this scope
+ 2950 | void vTaskStepTick( TickType_t xTicksToJump ) PRIVILEGED_FUNCTION;
+      |                     ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2966:54: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2966 | eSleepModeStatus eTaskConfirmSleepModeStatus( void ) PRIVILEGED_FUNCTION;
+      |                                                      ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2972:52: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2972 | TaskHandle_t pvTaskIncrementMutexHeldCount( void ) PRIVILEGED_FUNCTION;
+      |                                                    ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2978:66: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 2978 | void vTaskInternalSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+      |                                                                  ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:624:1: error: 'BaseType_t' does not name a type
+  624 | BaseType_t xQueueGenericSend( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:713:1: error: 'BaseType_t' does not name a type
+  713 | BaseType_t xQueuePeek( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:741:1: error: 'BaseType_t' does not name a type
+  741 | BaseType_t xQueuePeekFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:825:1: error: 'BaseType_t' does not name a type
+  825 | BaseType_t xQueueReceive( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:839:1: error: 'UBaseType_t' does not name a type
+  839 | UBaseType_t uxQueueMessagesWaiting( const QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:853:1: error: 'UBaseType_t' does not name a type
+  853 | UBaseType_t uxQueueSpacesAvailable( const QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:864:43: error: expected initializer before 'PRIVILEGED_FUNCTION'
+  864 | void vQueueDelete( QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      |                                           ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1203:1: error: 'BaseType_t' does not name a type
+ 1203 | BaseType_t xQueueGenericSendFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1207:1: error: 'BaseType_t' does not name a type
+ 1207 | BaseType_t xQueueGiveFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1288:1: error: 'BaseType_t' does not name a type
+ 1288 | BaseType_t xQueueReceiveFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1298:1: error: 'BaseType_t' does not name a type
+ 1298 | BaseType_t xQueueIsQueueEmptyFromISR( const QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1306:1: error: 'BaseType_t' does not name a type
+ 1306 | BaseType_t xQueueIsQueueFullFromISR( const QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1314:1: error: 'UBaseType_t' does not name a type
+ 1314 | UBaseType_t uxQueueMessagesWaitingFromISR( const QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1327:1: error: 'BaseType_t' does not name a type
+ 1327 | BaseType_t xQueueCRSendFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1330:1: error: 'BaseType_t' does not name a type
+ 1330 | BaseType_t xQueueCRReceiveFromISR( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1333:1: error: 'BaseType_t' does not name a type
+ 1333 | BaseType_t xQueueCRSend( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1336:1: error: 'BaseType_t' does not name a type
+ 1336 | BaseType_t xQueueCRReceive( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1345:40: error: 'uint8_t' does not name a type
+ 1345 | QueueHandle_t xQueueCreateMutex( const uint8_t ucQueueType ) PRIVILEGED_FUNCTION;
+      |                                        ^~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:48:1: note: 'uint8_t' is defined in header '<cstdint>'; this is probably fixable by adding '#include <cstdint>'
+   47 | #include "task.h"
+  +++ |+#include <cstdint>
+   48 | 
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1345:62: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1345 | QueueHandle_t xQueueCreateMutex( const uint8_t ucQueueType ) PRIVILEGED_FUNCTION;
+      |                                                              ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1346:46: error: 'uint8_t' does not name a type
+ 1346 | QueueHandle_t xQueueCreateMutexStatic( const uint8_t ucQueueType,
+      |                                              ^~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1346:46: note: 'uint8_t' is defined in header '<cstdint>'; this is probably fixable by adding '#include <cstdint>'
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1347:40: error: 'StaticQueue_t' has not been declared
+ 1347 |                                        StaticQueue_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
+      |                                        ^~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1347:72: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1347 |                                        StaticQueue_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
+      |                                                                        ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1348:52: error: 'UBaseType_t' does not name a type
+ 1348 | QueueHandle_t xQueueCreateCountingSemaphore( const UBaseType_t uxMaxCount,
+      |                                                    ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1349:52: error: 'UBaseType_t' does not name a type
+ 1349 |                                              const UBaseType_t uxInitialCount ) PRIVILEGED_FUNCTION;
+      |                                                    ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1349:81: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1349 |                                              const UBaseType_t uxInitialCount ) PRIVILEGED_FUNCTION;
+      |                                                                                 ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1350:58: error: 'UBaseType_t' does not name a type
+ 1350 | QueueHandle_t xQueueCreateCountingSemaphoreStatic( const UBaseType_t uxMaxCount,
+      |                                                          ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1351:58: error: 'UBaseType_t' does not name a type
+ 1351 |                                                    const UBaseType_t uxInitialCount,
+      |                                                          ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1352:52: error: 'StaticQueue_t' has not been declared
+ 1352 |                                                    StaticQueue_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
+      |                                                    ^~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1352:84: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1352 |                                                    StaticQueue_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
+      |                                                                                    ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1353:1: error: 'BaseType_t' does not name a type
+ 1353 | BaseType_t xQueueSemaphoreTake( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1355:63: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1355 | TaskHandle_t xQueueGetMutexHolder( QueueHandle_t xSemaphore ) PRIVILEGED_FUNCTION;
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1356:70: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1356 | TaskHandle_t xQueueGetMutexHolderFromISR( QueueHandle_t xSemaphore ) PRIVILEGED_FUNCTION;
+      |                                                                      ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1362:1: error: 'BaseType_t' does not name a type
+ 1362 | BaseType_t xQueueTakeMutexRecursive( QueueHandle_t xMutex,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1364:1: error: 'BaseType_t' does not name a type
+ 1364 | BaseType_t xQueueGiveMutexRecursive( QueueHandle_t xMutex ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1522:41: error: 'UBaseType_t' does not name a type
+ 1522 | QueueSetHandle_t xQueueCreateSet( const UBaseType_t uxEventQueueLength ) PRIVILEGED_FUNCTION;
+      |                                         ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1522:74: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1522 | QueueSetHandle_t xQueueCreateSet( const UBaseType_t uxEventQueueLength ) PRIVILEGED_FUNCTION;
+      |                                                                          ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1546:1: error: 'BaseType_t' does not name a type
+ 1546 | BaseType_t xQueueAddToSet( QueueSetMemberHandle_t xQueueOrSemaphore,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1566:1: error: 'BaseType_t' does not name a type
+ 1566 | BaseType_t xQueueRemoveFromSet( QueueSetMemberHandle_t xQueueOrSemaphore,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1604:51: error: 'TickType_t' does not name a type
+ 1604 |                                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                   ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1604:77: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1604 |                                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                                             ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1609:81: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1609 | QueueSetMemberHandle_t xQueueSelectFromSetFromISR( QueueSetHandle_t xQueueSet ) PRIVILEGED_FUNCTION;
+      |                                                                                 ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1615:38: error: 'TickType_t' has not been declared
+ 1615 |                                      TickType_t xTicksToWait,
+      |                                      ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1616:44: error: 'BaseType_t' does not name a type
+ 1616 |                                      const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+      |                                            ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1616:75: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1616 |                                      const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+      |                                                                           ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1617:1: error: 'BaseType_t' does not name a type
+ 1617 | BaseType_t xQueueGenericReset( QueueHandle_t xQueue,
+      | ^~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1620:28: error: 'UBaseType_t' has not been declared
+ 1620 |                            UBaseType_t uxQueueNumber ) PRIVILEGED_FUNCTION;
+      |                            ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1620:56: error: expected initializer before 'PRIVILEGED_FUNCTION'
+ 1620 |                            UBaseType_t uxQueueNumber ) PRIVILEGED_FUNCTION;
+      |                                                        ^~~~~~~~~~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1621:1: error: 'UBaseType_t' does not name a type
+ 1621 | UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1622:1: error: 'uint8_t' does not name a type
+ 1622 | uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~
+/opt/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:1622:1: note: 'uint8_t' is defined in header '<cstdint>'; this is probably fixable by adding '#include <cstdint>'
+[3/14] Performing build step for 'bootloader'
+[1/1] cd /home/omer/dev/motorcycle/build/bootloader && /home/omer/.espressif/python_env/idf6.0_py3.14_env/bin/python /opt/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/omer/dev/motorcycle/build/bootloader/bootloader.bin
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[4/14] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl/lvgl.cpp.obj
+[5/14] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/UI/UI.cpp.obj
+[6/14] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj
+ninja: build stopped: subcommand failed.

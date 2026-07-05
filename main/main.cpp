@@ -1,8 +1,11 @@
+#include "espNow/espNow.hpp"
 #include "esp_log.h"
 #include "lv_conf_internal.h"
 #include "lvgl.hpp"
+#include "panelConfig.hpp"
 #include <LovyanGFX.hpp>
 #include <stdint.h>
+#include <types.hpp>
 
 #define BUF_SIZE ((SCREEN_WIDTH * SCREEN_HEIGHT * LV_COLOR_DEPTH / 8) / 10)
 
@@ -37,6 +40,9 @@ void flushToDiplay(lv_display_t* display, const lv_area_t* area,
 }
 
 extern "C" void app_main(void) {
+  //  ESP_LOGI("Display", "Initializing display system...");
+  initQueue();
+  initWifi();
   ESP_LOGI("Display", "Initializing display system...");
 
   lcd.init();

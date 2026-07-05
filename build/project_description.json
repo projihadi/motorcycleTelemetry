@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "motorcycle",
-    "project_version":    "1",
+    "project_version":    "e1f521d-dirty",
     "project_path":       "/home/omer/dev/motorcycle",
     "idf_path":           "/opt/esp-idf",
     "build_dir":          "/home/omer/dev/motorcycle/build",
@@ -1330,7 +1330,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/omer/dev/motorcycle/build/esp-idf/esp_libc/libesp_libc.a",
-            "sources": [ "/opt/esp-idf/components/esp_libc/src/init.c", "/opt/esp-idf/components/esp_libc/src/abort.c", "/opt/esp-idf/components/esp_libc/src/assert.c", "/opt/esp-idf/components/esp_libc/src/heap.c", "/opt/esp-idf/components/esp_libc/src/locks.c", "/opt/esp-idf/components/esp_libc/src/poll.c", "/opt/esp-idf/components/esp_libc/src/pthread.c", "/opt/esp-idf/components/esp_libc/src/random.c", "/opt/esp-idf/components/esp_libc/src/getentropy.c", "/opt/esp-idf/components/esp_libc/src/termios.c", "/opt/esp-idf/components/esp_libc/src/stdatomic.c", "/opt/esp-idf/components/esp_libc/src/time.c", "/opt/esp-idf/components/esp_libc/src/sysconf.c", "/opt/esp-idf/components/esp_libc/src/realpath.c", "/opt/esp-idf/components/esp_libc/src/scandir.c", "/opt/esp-idf/components/esp_libc/src/syscalls.c", "/opt/esp-idf/components/esp_libc/src/reent_syscalls.c", "/opt/esp-idf/components/esp_libc/src/port/esp_time_impl.c", "/opt/esp-idf/components/esp_libc/src/picolibc/picolibc_init.c", "/opt/esp-idf/components/esp_libc/src/picolibc/rand.c", "/opt/esp-idf/components/esp_libc/src/picolibc/open_memstream.c", "/opt/esp-idf/components/esp_libc/src/picolibc/errno.c", "/opt/esp-idf/components/esp_libc/src/picolibc/bufio_setvbuf.c", "/opt/esp-idf/components/esp_libc/src/picolibc/getreent.c", "/opt/esp-idf/components/esp_libc/src/picolibc/fopencookie.c", "/opt/esp-idf/components/esp_libc/src/port/esp_time_impl.c" ],
+            "sources": [ "/opt/esp-idf/components/esp_libc/src/init.c", "/opt/esp-idf/components/esp_libc/src/abort.c", "/opt/esp-idf/components/esp_libc/src/assert.c", "/opt/esp-idf/components/esp_libc/src/heap.c", "/opt/esp-idf/components/esp_libc/src/locks.c", "/opt/esp-idf/components/esp_libc/src/poll.c", "/opt/esp-idf/components/esp_libc/src/pthread.c", "/opt/esp-idf/components/esp_libc/src/random.c", "/opt/esp-idf/components/esp_libc/src/getentropy.c", "/opt/esp-idf/components/esp_libc/src/termios.c", "/opt/esp-idf/components/esp_libc/src/stdatomic.c", "/opt/esp-idf/components/esp_libc/src/time.c", "/opt/esp-idf/components/esp_libc/src/sysconf.c", "/opt/esp-idf/components/esp_libc/src/realpath.c", "/opt/esp-idf/components/esp_libc/src/scandir.c", "/opt/esp-idf/components/esp_libc/src/syscalls.c", "/opt/esp-idf/components/esp_libc/src/reent_syscalls.c", "/opt/esp-idf/components/esp_libc/src/port/esp_time_impl.c", "/opt/esp-idf/components/esp_libc/src/port/xtensa/stdatomic_s32c1i.c", "/opt/esp-idf/components/esp_libc/src/picolibc/picolibc_init.c", "/opt/esp-idf/components/esp_libc/src/picolibc/rand.c", "/opt/esp-idf/components/esp_libc/src/picolibc/open_memstream.c", "/opt/esp-idf/components/esp_libc/src/picolibc/errno.c", "/opt/esp-idf/components/esp_libc/src/picolibc/bufio_setvbuf.c", "/opt/esp-idf/components/esp_libc/src/picolibc/getreent.c", "/opt/esp-idf/components/esp_libc/src/picolibc/fopencookie.c", "/opt/esp-idf/components/esp_libc/src/port/esp_time_impl.c" ],
             "include_dirs": [ "platform_include" ]
         },
         "esp_local_ctrl": {
@@ -1450,7 +1450,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/omer/dev/motorcycle/build/esp-idf/esp_psram/libesp_psram.a",
-            "sources": [ "/opt/esp-idf/components/esp_psram/system_layer/esp_psram_mspi.c" ],
+            "sources": [ "/opt/esp-idf/components/esp_psram/system_layer/esp_psram_mspi.c", "/opt/esp-idf/components/esp_psram/system_layer/esp_psram.c", "/opt/esp-idf/components/esp_psram/esp32s3/esp_psram_impl_octal.c", "/opt/esp-idf/components/esp_psram/device", "/opt/esp-idf/components/esp_psram/xip_impl/mmu_psram_flash.c" ],
             "include_dirs": [ "include", "xip_impl/include" ]
         },
         "esp_ringbuf": {
@@ -1795,8 +1795,8 @@
             "managed_reqs": [],
             "managed_priv_reqs": [ "lovyangfx", "lvgl__lvgl" ],
             "file": "/home/omer/dev/motorcycle/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/omer/dev/motorcycle/main/main.cpp", "/home/omer/dev/motorcycle/main/lvgl/lvgl.cpp", "/home/omer/dev/motorcycle/main/UI/UI.cpp" ],
-            "include_dirs": [ ".", "lvgl", "UI" ]
+            "sources": [ "/home/omer/dev/motorcycle/main/main.cpp", "/home/omer/dev/motorcycle/main/types.cpp", "/home/omer/dev/motorcycle/main/lvgl/lvgl.cpp", "/home/omer/dev/motorcycle/main/espNow/espNow.cpp", "/home/omer/dev/motorcycle/main/UI/UI.cpp" ],
+            "include_dirs": [ ".", "lvgl", "UI", "espNow" ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -3933,7 +3933,7 @@
             "priv_reqs": [ "lovyangfx", "lvgl__lvgl" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "lovyangfx", "lvgl__lvgl" ],
-            "include_dirs": [ ".", "lvgl", "UI" ]
+            "include_dirs": [ ".", "lvgl", "UI", "espNow" ]
         },
         "lovyangfx": {
             "alias": "idf::lovyangfx",
