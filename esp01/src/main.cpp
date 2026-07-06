@@ -1,4 +1,3 @@
-// Exact include chain requirement for ESP8266 RTOS SDK v1.5.x
 extern "C" {
 #include "c_types.h"
 
@@ -38,11 +37,11 @@ static MotorcycleTelemetry telemetryData;
 
 // ESP8266 legacy callback signature
 static void sendCallback(uint8_t* macAddress, uint8_t status) {
-  if (status == 0) {
-    os_printf("Delivery Success\n");
-  } else {
-    os_printf("Delivery Fail\n");
-  }
+  // if (status == 0) {
+  //   // os_printf("Delivery Success\n");
+  // } else {
+  //   // os_printf("Delivery Fail\n");
+  // }
 }
 
 // FreeRTOS Task to handle processing
@@ -69,7 +68,7 @@ void telemetry_task(void* pvParameters) {
   int peer_res =
       esp_now_add_peer((uint8_t*)mac, ESP_NOW_ROLE_SLAVE, 1, NULL, 0);
   if (peer_res != 0) {
-    os_printf("Failed to add peer: %d\n", peer_res);
+    // os_printf("Failed to add peer: %d\n", peer_res);
   }
 
   // Populate structural dataset configurations
@@ -83,18 +82,16 @@ void telemetry_task(void* pvParameters) {
     int result = esp_now_send((uint8_t*)mac, (uint8_t*)&telemetryData,
         sizeof(telemetryData));
     if (result != 0) {
-      os_printf("Error sending data: %d\n", result);
+      // os_printf("Error sending data: %d\n", result);
     }
 
-    telemetryData.timestamp += 2000;
-    vTaskDelay(2000 / portTICK_RATE_MS);
+    telemetryData.timestamp += 300;
+    vTaskDelay(300 / portTICK_RATE_MS);
   }
 }
 
 // Fixed Entry point for legacy RTOS SDK
 extern "C" void user_init(void) {
-  // FIX: Reduced stack size from 2048 to 512 to prevent heap starvation on
-  // ESP-01
   xTaskCreate(telemetry_task, (const signed char*)"telemetry_task", 512, NULL,
       2, NULL);
 }
