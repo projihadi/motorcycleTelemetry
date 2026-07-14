@@ -3930,8 +3930,7 @@ CONFIG_LV_ATTRIBUTE_MEM_ALIGN_SIZE=1
 CONFIG_LV_FONT_MONTSERRAT_14=y
 # default:
 # CONFIG_LV_FONT_MONTSERRAT_16 is not set
-# default:
-# CONFIG_LV_FONT_MONTSERRAT_18 is not set
+CONFIG_LV_FONT_MONTSERRAT_18=y
 # default:
 # CONFIG_LV_FONT_MONTSERRAT_20 is not set
 # default:
@@ -3958,7 +3957,6 @@ CONFIG_LV_FONT_MONTSERRAT_14=y
 # CONFIG_LV_FONT_MONTSERRAT_42 is not set
 # default:
 # CONFIG_LV_FONT_MONTSERRAT_44 is not set
-# default:
 # CONFIG_LV_FONT_MONTSERRAT_46 is not set
 # default:
 # CONFIG_LV_FONT_MONTSERRAT_48 is not set
@@ -4034,8 +4032,7 @@ CONFIG_LV_FONT_DEFAULT_MONTSERRAT_14=y
 # CONFIG_LV_FONT_FMT_TXT_LARGE is not set
 # default:
 # CONFIG_LV_USE_FONT_COMPRESSED is not set
-# default:
-CONFIG_LV_USE_FONT_PLACEHOLDER=y
+# CONFIG_LV_USE_FONT_PLACEHOLDER is not set
 
 #
 # Enable static fonts
@@ -4324,7 +4321,6 @@ CONFIG_LVGL_VERSION_PATCH=0
 # CONFIG_LV_USE_LIBINPUT is not set
 # default:
 # CONFIG_LV_USE_ST7735 is not set
-# default:
 # CONFIG_LV_USE_ST7789 is not set
 # default:
 # CONFIG_LV_USE_ST7796 is not set
@@ -4349,37 +4345,13 @@ CONFIG_LVGL_VERSION_PATCH=0
 #
 # Examples
 #
-# default:
-CONFIG_LV_BUILD_EXAMPLES=y
+# CONFIG_LV_BUILD_EXAMPLES is not set
 # end of Examples
 
 #
 # Demos
 #
-# default:
-CONFIG_LV_BUILD_DEMOS=y
-# default:
-# CONFIG_LV_USE_DEMO_WIDGETS is not set
-# default:
-# CONFIG_LV_USE_DEMO_KEYPAD_AND_ENCODER is not set
-# default:
-# CONFIG_LV_USE_DEMO_BENCHMARK is not set
-# default:
-# CONFIG_LV_USE_DEMO_RENDER is not set
-# default:
-# CONFIG_LV_USE_DEMO_STRESS is not set
-# default:
-# CONFIG_LV_USE_DEMO_MUSIC is not set
-# default:
-# CONFIG_LV_USE_DEMO_FLEX_LAYOUT is not set
-# default:
-# CONFIG_LV_USE_DEMO_MULTILANG is not set
-# default:
-# CONFIG_LV_USE_DEMO_SMARTWATCH is not set
-# default:
-# CONFIG_LV_USE_DEMO_EBIKE is not set
-# default:
-# CONFIG_LV_USE_DEMO_HIGH_RES is not set
+# CONFIG_LV_BUILD_DEMOS is not set
 # end of Demos
 # end of LVGL configuration
 # end of Component config

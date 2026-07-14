@@ -25,7 +25,7 @@ public:
     auto config = bus.config();
     config.spi_host = SPI2_HOST;
     config.spi_mode = 0;
-    config.freq_write = 40000000;
+    config.freq_write = 10000000;
     // config.freq_read = 16000000;
     config.pin_sclk = PIN_NUM_CLK;
     config.pin_mosi = PIN_NUM_MOSI;
