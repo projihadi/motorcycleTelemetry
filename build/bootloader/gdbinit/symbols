@@ -17,4 +17,4 @@ set confirm off
 set confirm on
 
 # Load application symbols
-file /home/omer/dev/motorcycle/build/bootloader/bootloader.elf
+file /home/omer/dev/motorcycleTelemetry/build/bootloader/bootloader.elf

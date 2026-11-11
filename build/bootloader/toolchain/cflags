@@ -1,4 +1,4 @@
-"-specs=/home/omer/dev/motorcycle/build/bootloader/specs/picolibc.specs"
+"-specs=/home/omer/dev/motorcycleTelemetry/build/bootloader/specs/picolibc.specs"
 -mlongcalls
 -fno-builtin-memcpy
 -fno-builtin-memset

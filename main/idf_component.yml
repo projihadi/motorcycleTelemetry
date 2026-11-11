@@ -4,5 +4,6 @@ dependencies:
   idf:
     version: ">=4.1.0"
   lvgl/lvgl: "*"
-  lovyangfx:
+  lovyan03/lovyangfx:
     git: https://github.com/lovyan03/LovyanGFX.git
+    version: master

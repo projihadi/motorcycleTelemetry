@@ -1,10 +1,11 @@
 #pragma once
+#include "lgfx/v1/panel/Panel_ILI9341.hpp"
 #include <LovyanGFX.hpp>
 #include <lvgl.h>
 
-#define PIN_NUM_MISO -1
 #define PIN_NUM_MOSI 13
 #define PIN_NUM_CLK 14
+#define PIN_LCD_MISO 9
 #define PIN_NUM_CS 10
 #define PIN_NUM_DC 12
 #define PIN_NUM_RST 11
@@ -13,11 +14,10 @@
 #define SCREEN_WIDTH 320
 #define SCREEN_HEIGHT 240
 
-#define FULL_SCREEN_BUF_SIZE                                                   \
-  (SCREEN_WIDTH * SCREEN_HEIGHT * (LV_COLOR_DEPTH / 8))
+#define FULL_SCREEN_BUF_SIZE (SCREEN_WIDTH * SCREEN_HEIGHT * (LV_COLOR_DEPTH / 8))
 
 class LGFX_Custom : public lgfx::LGFX_Device {
-  lgfx::Panel_ST7789 panel;
+  lgfx::Panel_ILI9341 panel;
   lgfx::Bus_SPI bus;
 
 public:
@@ -29,7 +29,7 @@ public:
     // config.freq_read = 16000000;
     config.pin_sclk = PIN_NUM_CLK;
     config.pin_mosi = PIN_NUM_MOSI;
-    config.pin_miso = PIN_NUM_MISO;
+    // config.pin_miso = PIN_NUM_MISO;
     config.pin_dc = PIN_NUM_DC;
     bus.config(config);
     panel.setBus(&bus);
@@ -38,8 +38,8 @@ public:
     panelConfig.pin_cs = PIN_NUM_CS;
     panelConfig.pin_rst = PIN_NUM_RST;
     // panelConfig.pin_bl = PIN_NUM_BCKL;
-    panelConfig.panel_width = 240;
-    panelConfig.panel_height = 320;
+    panelConfig.panel_width = SCREEN_WIDTH;
+    panelConfig.panel_height = SCREEN_HEIGHT;
     panelConfig.offset_x = 0;
     panelConfig.offset_y = 0;
     panelConfig.dummy_read_pixel = 8;

@@ -1,6 +1,7 @@
 #include "espNow/espNow.hpp"
 #include "esp_log.h"
 #include "lv_conf_internal.h"
+#include "lv_init.h"
 #include "lvgl.hpp"
 #include "panelConfig.hpp"
 #include <LovyanGFX.hpp>
@@ -45,10 +46,19 @@ extern "C" void app_main(void) {
   initWifi();
   ESP_LOGI("Display", "Initializing display system...");
 
-  lcd.init();
+  if (!lcd.init()) {
+    ESP_LOGE("Display", "LCD init failed!");
+  }
   lcd.initDMA();
-  lcd.setRotation(1);
+  lcd.setRotation(0);
+  lcd.setBrightness(255);
   lcd.setColorDepth(LV_COLOR_DEPTH);
+
+  lv_init();
+  display = lv_display_create(SCREEN_WIDTH, SCREEN_HEIGHT);
+
+  // lv_obj_set_style_bg_color(lv_screen_active(), lv_color_hex(0x000000),
+  //     LV_STATE_DEFAULT);
 
   lv_draw_buf_init(&drawBuffer1, SCREEN_WIDTH, SCREEN_HEIGHT / 10,
       LV_COLOR_FORMAT_RGB565, 0, buffer1Data, BUF_SIZE);
@@ -59,9 +69,6 @@ extern "C" void app_main(void) {
   // lv_draw_buf_init(&drawBuffer3, SCREEN_WIDTH, SCREEN_HEIGHT,
   //     LV_COLOR_FORMAT_RGB565, 0, buffer3Data, BUF_SIZE);
 
-  lv_init();
-
-  display = lv_display_create(SCREEN_WIDTH, SCREEN_HEIGHT);
   lv_display_set_flush_cb(display, flushToDiplay);
 
   lv_display_set_buffers(display, &drawBuffer1, &drawBuffer2, BUF_SIZE,

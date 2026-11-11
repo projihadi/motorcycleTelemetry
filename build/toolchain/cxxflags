@@ -3,5 +3,5 @@
 -fno-builtin-memset
 -fno-builtin-bzero
 -mdisable-hardware-atomics
-"-specs=/home/omer/dev/motorcycle/build/specs/picolibc.specs"
+"-specs=/home/omer/dev/motorcycleTelemetry/build/specs/picolibc.specs"
 -fno-rtti

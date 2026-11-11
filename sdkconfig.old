@@ -4032,8 +4032,7 @@ CONFIG_LV_FONT_DEFAULT_MONTSERRAT_14=y
 # CONFIG_LV_FONT_FMT_TXT_LARGE is not set
 # default:
 # CONFIG_LV_USE_FONT_COMPRESSED is not set
-# default:
-CONFIG_LV_USE_FONT_PLACEHOLDER=y
+# CONFIG_LV_USE_FONT_PLACEHOLDER is not set
 
 #
 # Enable static fonts
@@ -4314,8 +4313,9 @@ CONFIG_LVGL_VERSION_PATCH=0
 # CONFIG_LV_USE_LINUX_DRM is not set
 # default:
 # CONFIG_LV_USE_TFT_ESPI is not set
+CONFIG_LV_USE_LOVYAN_GFX=y
 # default:
-# CONFIG_LV_USE_LOVYAN_GFX is not set
+CONFIG_LV_LGFX_USER_INCLUDE="lv_lgfx_user.hpp"
 # default:
 # CONFIG_LV_USE_EVDEV is not set
 # default:

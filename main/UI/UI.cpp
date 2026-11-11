@@ -7,7 +7,6 @@
 #include "display/lv_display.h"
 #include "esp_log.h"
 #include "font/lv_font.h"
-#include "lv_conf_internal.h"
 #include "misc/lv_area.h"
 #include "panelConfig.hpp"
 #include "widgets/arc/lv_arc.h"
@@ -30,7 +29,7 @@ void initTelemetryUI(void) {
       lv_tileview_add_tile(tileview, 0, 0, LV_DIR_RIGHT);
   lv_obj_set_scrollbar_mode(telemetryWindow, LV_SCROLLBAR_MODE_OFF);
   lv_obj_clear_flag(telemetryWindow, LV_OBJ_FLAG_SCROLLABLE);
-  lv_obj_t* playerWindow = lv_tileview_add_tile(tileview, 1, 0, LV_DIR_LEFT);
+  // lv_obj_t* playerWindow = lv_tileview_add_tile(tileview, 1, 0, LV_DIR_LEFT);
   lv_obj_set_style_bg_color(telemetryWindow, lv_color_hex(0x000000),
       LV_STATE_DEFAULT);
   lv_obj_set_style_bg_opa(telemetryWindow, LV_OPA_COVER, LV_STATE_DEFAULT);
@@ -92,7 +91,7 @@ void initTelemetryUI(void) {
   lv_obj_set_size(arc, 280, 280);
   lv_arc_set_mode(arc, LV_ARC_MODE_SYMMETRICAL);
   lv_arc_set_range(arc, -60, 60);
-  lv_arc_set_bg_angles(arc, 180, 360);
+  lv_arc_set_bg_angles(arc, 0, 360);
   lv_obj_align(arc, LV_ALIGN_CENTER, 0, 125);
   lv_obj_remove_flag(arc, LV_OBJ_FLAG_CLICKABLE);
   lv_arc_set_value(arc, 16);
@@ -101,7 +100,7 @@ void initTelemetryUI(void) {
   lv_obj_set_style_arc_width(arc, 15, LV_PART_MAIN);
   lv_obj_set_style_arc_color(arc, lv_color_hex(0x93BFCF), LV_PART_INDICATOR);
   lv_obj_set_style_arc_width(arc, 15, LV_PART_INDICATOR);
-  lv_obj_set_style_bg_color(arc, lv_color_hex(0x93BFCF), LV_PART_KNOB);
+  lv_obj_set_style_bg_color(arc, lv_color_hex(0x000000), LV_PART_KNOB);
   lv_obj_set_style_pad_all(arc, 3, LV_PART_KNOB);
   lv_obj_set_style_border_color(arc, lv_color_hex(0x93BFCF), LV_PART_KNOB);
   lv_obj_set_style_border_width(arc, 2, LV_PART_KNOB);

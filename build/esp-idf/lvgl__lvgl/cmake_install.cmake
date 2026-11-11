@@ -1,4 +1,4 @@
-# Install script for directory: /home/omer/dev/motorcycle/managed_components/lvgl__lvgl
+# Install script for directory: /home/omer/dev/motorcycleTelemetry/components/lvgl__lvgl
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/omer/dev/motorcycle/build/esp-idf/lvgl__lvgl/install_local_manifest.txt"
+  file(WRITE "/home/omer/dev/motorcycleTelemetry/build/esp-idf/lvgl__lvgl/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
