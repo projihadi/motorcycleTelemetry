@@ -1,0 +1,65 @@
+Command: ninja flash
+[1/5] cd /home/omer/dev/motorcycleTelemetry/build && /home/omer/.espressif/python_env/idf6.1_py3.14_env/bin/python /opt/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/omer/dev/motorcycleTelemetry/build/partition_table/partition-table.bin /home/omer/dev/motorcycleTelemetry/build/motorcycle.bin
+motorcycle.bin binary size 0x1138a0 bytes. Smallest app partition is 0x177000 bytes. 0x63760 bytes (27%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/omer/dev/motorcycleTelemetry/build/bootloader && /home/omer/.espressif/python_env/idf6.1_py3.14_env/bin/python /opt/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/omer/dev/motorcycleTelemetry/build/bootloader/bootloader.bin
+Bootloader binary size 0x5280 bytes. 0x2d80 bytes (36%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] Running utility command for flash
+esptool --chip esp32s3 -p /dev/ttyACM0 -b 460800 --before=default-reset --after=hard-reset write-flash --flash-mode dio --flash-freq 80m --flash-size 16MB 0x0 bootloader/bootloader.bin 0x8000 partition_table/partition-table.bin 0x10000 motorcycle.bin --diff-with bootloader/bootloader_flashed.bin partition_table/partition-table_flashed.bin motorcycle_flashed.bin
+esptool v5.6.0
+Serial port /dev/ttyACM0:
+Connecting...
+[1A[2K[1A[2KConnected to ESP32-S3 on /dev/ttyACM0:
+Chip type:          ESP32-S3 (QFN56) (revision v0.2)
+Features:           Wi-Fi, BT 5 (LE), Dual Core + LP Core, 240MHz, Embedded PSRAM 8MB (AP_3v3)
+Crystal frequency:  40MHz
+MAC:                98:88:e0:15:ba:70
+
+Uploading stub flasher...
+Running stub flasher...
+[1A[2K[1A[2KStub flasher running.
+Changing baud rate to 460800...
+Changed.
+
+Configuring flash size...
+
+Writing 'bootloader/bootloader.bin' at 0x00000000...
+SHA digest in image updated.
+SHA digest in image updated.
+No changed sectors found, verifying if data is in flash...
+[1A[2K[38;2;0;119;187mNOTE:[0m Data not found in flash, flashing the whole image...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Compressed 21120 bytes to 13586...
+[2KWriting at 0x00005280 [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m 100.0% 13.27kB/13.27kB [0s] 
+[1A[2K[1A[2KWrote 21120 bytes (13586 compressed) at 0x00000000 in 0.5 seconds (321.3 kbit/s).
+Verifying written data...
+[1A[2KHash of data verified.
+
+Writing 'partition_table/partition-table.bin' at 0x00008000...
+No changed sectors found, verifying if data is in flash...
+[1A[2K[38;2;0;119;187mNOTE:[0m Data not found in flash, flashing the whole image...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 3072 bytes to 105...
+[2KWriting at 0x00008c00 [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m 100.0% 105B/105B [0s] 
+[1A[2K[1A[2KWrote 3072 bytes (105 compressed) at 0x00008000 in 0.0 seconds (775.7 kbit/s).
+Verifying written data...
+[1A[2KHash of data verified.
+
+Writing 'motorcycle.bin' at 0x00010000...
+Changed data sectors found, fast reflashing...
+Reflashing 1 changed sector at 0x00010000...
+Flash will be erased from 0x00010000 to 0x00010fff...
+Compressed 4096 bytes to 1944...
+[2KWriting at 0x00011000 [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m 100.0% 1.90kB/1.90kB [0s] 
+[1A[2K[1A[2KWrote 4096 bytes (1944 compressed) at 0x00010000 in 0.0 seconds (706.7 kbit/s).
+Reflashing 263 changed sectors at 0x0001d000...
+Flash will be erased from 0x0001d000 to 0x00123fff...
+Compressed 1077248 bytes to 699604...
+[2KWriting at 0x00024d63 [38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m   2.3% 16.00kB/683.21kB [0s] [2KWriting at 0x0002d126 [38;2;249;38;114m━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m   4.7% 32.00kB/683.21kB [0s] [2KWriting at 0x0003430c [38;2;249;38;114m━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m   7.0% 48.00kB/683.21kB [1s] [2KWriting at 0x0003e9a8 [38;2;249;38;114m━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m   9.4% 64.00kB/683.21kB [1s] [2KWriting at 0x0004489e [38;2;249;38;114m━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m  11.7% 80.00kB/683.21kB [2s] [2KWriting at 0x0004ab0d [38;2;249;38;114m━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━[0m  14.1% 96.00kB/683.21kB [2s] [2KWriting at 0x00050c73 [38;2;249;38;114m━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━[0m  16.4% 112.00kB/683.21kB [2s] [2KWriting at 0x00056c94 [38;2;249;38;114m━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━[0m  18.7% 128.00kB/683.21kB [3s] [2KWriting at 0x0005d21f [38;2;249;38;114m━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━[0m  21.1% 144.00kB/683.21kB [3s] [2KWriting at 0x00062eeb [38;2;249;38;114m━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━[0m  23.4% 160.00kB/683.21kB [3s] [2KWriting at 0x0006936b [38;2;249;38;114m━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━[0m  25.8% 176.00kB/683.21kB [4s] [2KWriting at 0x0006f9a2 [38;2;249;38;114m━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━[0m  28.1% 192.00kB/683.21kB [4s] [2KWriting at 0x00075669 [38;2;249;38;114m━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━[0m  30.4% 208.00kB/683.21kB [5s] [2KWriting at 0x0007b23e [38;2;249;38;114m━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━[0m  32.8% 224.00kB/683.21kB [5s] [2KWriting at 0x000813d9 [38;2;249;38;114m━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━[0m  35.1% 240.00kB/683.21kB [5s] [2KWriting at 0x00087ee2 [38;2;249;38;114m━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━[0m  37.5% 256.00kB/683.21kB [6s] [2KWriting at 0x00090dc4 [38;2;249;38;114m━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━[0m  39.8% 272.00kB/683.21kB [6s] [2KWriting at 0x00097951 [38;2;249;38;114m━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m  42.2% 288.00kB/683.21kB [6s] [2KWriting at 0x0009cf3d [38;2;249;38;114m━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━[0m  44.5% 304.00kB/683.21kB [7s] [2KWriting at 0x000a26d8 [38;2;249;38;114m━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━[0m  46.8% 320.00kB/683.21kB [7s] [2KWriting at 0x000a7b1d [38;2;249;38;114m━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━[0m  49.2% 336.00kB/683.21kB [8s] [2KWriting at 0x000ad3b8 [38;2;249;38;114m━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━[0m  51.5% 352.00kB/683.21kB [8s] [2KWriting at 0x000b2a27 [38;2;249;38;114m━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━[0m  53.9% 368.00kB/683.21kB [8s] [2KWriting at 0x000b7c47 [38;2;249;38;114m━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━[0m  56.2% 384.00kB/683.21kB [9s] [2KWriting at 0x000bcd9d [38;2;249;38;114m━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━[0m  58.5% 400.00kB/683.21kB [9s] [2KWriting at 0x000c219b [38;2;249;38;114m━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━[0m  60.9% 416.00kB/683.21kB [9s] [2KWriting at 0x000c7a46 [38;2;249;38;114m━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━[0m  63.2% 432.00kB/683.21kB [10s] [2KWriting at 0x000ccfe0 [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━[0m  65.6% 448.00kB/683.21kB [10s] [2KWriting at 0x000d25af [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━[0m  67.9% 464.00kB/683.21kB [11s] [2KWriting at 0x000d82c1 [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━[0m  70.3% 480.00kB/683.21kB [11s] [2KWriting at 0x000ddbe8 [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━[0m  72.6% 496.00kB/683.21kB [11s] [2KWriting at 0x000e37f8 [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━[0m  74.9% 512.00kB/683.21kB [12s] [2KWriting at 0x000e93dc [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━[0m  77.3% 528.00kB/683.21kB [12s] [2KWriting at 0x000eee92 [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━[0m  79.6% 544.00kB/683.21kB [13s] [2KWriting at 0x000f4ab2 [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━[0m  82.0% 560.00kB/683.21kB [13s] [2KWriting at 0x000fa720 [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━[0m  84.3% 576.00kB/683.21kB [13s] [2KWriting at 0x000ffec6 [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━[0m  86.7% 592.00kB/683.21kB [14s] [2KWriting at 0x00107298 [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━[0m  89.0% 608.00kB/683.21kB [14s] [2KWriting at 0x0010d2a8 [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━[0m  91.3% 624.00kB/683.21kB [14s] [2KWriting at 0x001133f7 [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━[0m  93.7% 640.00kB/683.21kB [15s] [2KWriting at 0x0011a15c [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━[0m  96.0% 656.00kB/683.21kB [15s] [2KWriting at 0x0011f42e [38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;2;249;38;114m╸[0m  98.4% 672.00kB/683.21kB [16s] [2KWriting at 0x00124000 [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m 100.0% 683.21kB/683.21kB [16s] 
+[1A[2K[1A[2KWrote 1077248 bytes (699604 compressed) at 0x0001d000 in 16.4 seconds (525.6 kbit/s).
+Verifying written data...
+[1A[2KHash of data verified.
+
+Hard resetting via RTS pin...
