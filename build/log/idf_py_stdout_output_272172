@@ -1,0 +1,7 @@
+Command: cmake -G Ninja -B /home/omer/dev/motorcycleTelemetry/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/omer/.espressif/python_env/idf6.1_py3.14_env/bin/python -DESP_PLATFORM=1 -DIDF_TOOLCHAIN=clang -DCCACHE_ENABLE=False /home/omer/dev/motorcycleTelemetry
+-- git rev-parse returned 'fatal: detected dubious ownership in repository at '/opt/esp-idf'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /opt/esp-idf'
+-- Minimal build - OFF
+-- Configuring incomplete, errors occurred!

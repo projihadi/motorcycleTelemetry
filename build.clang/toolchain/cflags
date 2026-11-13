@@ -4,3 +4,5 @@
 -fno-builtin-memset
 -fno-builtin-bzero
 "-specs=/home/omer/dev/motorcycle/build.clang/specs/picolibc.specs"
+--target=xtensa-esp-elf
+-mcpu=esp32s3

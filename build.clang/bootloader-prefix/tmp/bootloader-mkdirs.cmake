@@ -10,18 +10,18 @@ if(NOT EXISTS "/opt/esp-idf/components/bootloader/subproject")
   file(MAKE_DIRECTORY "/opt/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "/home/omer/dev/motorcycle/build.clang/bootloader"
-  "/home/omer/dev/motorcycle/build.clang/bootloader-prefix"
-  "/home/omer/dev/motorcycle/build.clang/bootloader-prefix/tmp"
-  "/home/omer/dev/motorcycle/build.clang/bootloader-prefix/src/bootloader-stamp"
-  "/home/omer/dev/motorcycle/build.clang/bootloader-prefix/src"
-  "/home/omer/dev/motorcycle/build.clang/bootloader-prefix/src/bootloader-stamp"
+  "/home/omer/dev/motorcycleTelemetry/build.clang/bootloader"
+  "/home/omer/dev/motorcycleTelemetry/build.clang/bootloader-prefix"
+  "/home/omer/dev/motorcycleTelemetry/build.clang/bootloader-prefix/tmp"
+  "/home/omer/dev/motorcycleTelemetry/build.clang/bootloader-prefix/src/bootloader-stamp"
+  "/home/omer/dev/motorcycleTelemetry/build.clang/bootloader-prefix/src"
+  "/home/omer/dev/motorcycleTelemetry/build.clang/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/omer/dev/motorcycle/build.clang/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/omer/dev/motorcycleTelemetry/build.clang/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/omer/dev/motorcycle/build.clang/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/omer/dev/motorcycleTelemetry/build.clang/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

@@ -1,5 +1,5 @@
 #pragma once
-#include <lvgl.h>
+#include <lvgl.hpp>
 
 extern lv_obj_t* lean;
 extern lv_obj_t* breaking;

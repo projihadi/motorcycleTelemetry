@@ -5,3 +5,5 @@
 -fno-builtin-bzero
 "-specs=/home/omer/dev/motorcycle/build.clang/specs/picolibc.specs"
 -fno-rtti
+--target=xtensa-esp-elf
+-mcpu=esp32s3

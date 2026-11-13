@@ -1,0 +1,23 @@
+Command: ninja size
+[0/1] cd /home/omer/dev/motorcycleTelemetry/build && /home/omer/.espressif/tools/cmake/4.0.3/bin/cmake -D "IDF_SIZE_TOOL=/home/omer/.espressif/python_env/idf6.1_py3.14_env/bin/python;-m;esp_idf_size" -D MAP_FILE=/home/omer/dev/motorcycleTelemetry/build/motorcycle.map -D OUTPUT_JSON= -P /opt/esp-idf/tools/cmake/run_size_tool.cmake
+                            Memory Type Usage Summary                             
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Memory Type/Section ┃ Used [bytes] ┃ Used [%] ┃ Remain [bytes] ┃ Total [bytes] ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ Flash Code          │       888138 │          │                │               │
+│    .text            │       888138 │          │                │               │
+│ DIRAM               │       213990 │    62.61 │         127770 │        341760 │
+│    .bss             │       115120 │    33.68 │                │               │
+│    .text            │        76539 │     22.4 │                │               │
+│    .data            │        22331 │     6.53 │                │               │
+│ Flash Data          │       188684 │          │                │               │
+│    .rodata          │       188428 │          │                │               │
+│    .appdesc         │          256 │          │                │               │
+│ IRAM                │        16384 │    100.0 │              0 │         16384 │
+│    .text            │        15356 │    93.73 │                │               │
+│    .vectors         │         1028 │     6.27 │                │               │
+│ RTC SLOW            │           36 │     0.44 │           8156 │          8192 │
+│    .force_slow      │           36 │     0.44 │                │               │
+│ RTC FAST            │           24 │     0.29 │           8168 │          8192 │
+│    .rtc_reserved    │           24 │     0.29 │                │               │
+└─────────────────────┴──────────────┴──────────┴────────────────┴───────────────┘

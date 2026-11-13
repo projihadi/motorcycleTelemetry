@@ -34,16 +34,16 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "xtensa-esp32-elf-clang-objdump")
+  set(CMAKE_OBJDUMP "xtensa-esp32s3-elf-clang-objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/tf-psa-crypto/private/everest" TYPE DIRECTORY PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ DIR_PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/opt/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/everest/include/tf-psa-crypto/private/everest" FILES_MATCHING REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/opt/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/everest/include/" FILES_MATCHING REGEX "/[^/]*\\.h$")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/omer/dev/motorcycle/build.clang/esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/everest/install_local_manifest.txt"
+  file(WRITE "/home/omer/dev/motorcycleTelemetry/build.clang/esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/everest/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

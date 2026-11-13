@@ -34,21 +34,24 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "xtensa-esp32-elf-clang-objdump")
+  set(CMAKE_OBJDUMP "xtensa-esp32s3-elf-clang-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/omer/dev/motorcycle/build.clang/esp-idf/mbedtls/mbedtls/tf-psa-crypto/include/cmake_install.cmake")
-  include("/home/omer/dev/motorcycle/build.clang/esp-idf/mbedtls/mbedtls/tf-psa-crypto/core/cmake_install.cmake")
-  include("/home/omer/dev/motorcycle/build.clang/esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/cmake_install.cmake")
-  include("/home/omer/dev/motorcycle/build.clang/esp-idf/mbedtls/mbedtls/tf-psa-crypto/pkgconfig/cmake_install.cmake")
+  include("/home/omer/dev/motorcycleTelemetry/build.clang/esp-idf/mbedtls/mbedtls/tf-psa-crypto/include/cmake_install.cmake")
+  include("/home/omer/dev/motorcycleTelemetry/build.clang/esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/cmake_install.cmake")
+  include("/home/omer/dev/motorcycleTelemetry/build.clang/esp-idf/mbedtls/mbedtls/tf-psa-crypto/extras/cmake_install.cmake")
+  include("/home/omer/dev/motorcycleTelemetry/build.clang/esp-idf/mbedtls/mbedtls/tf-psa-crypto/platform/cmake_install.cmake")
+  include("/home/omer/dev/motorcycleTelemetry/build.clang/esp-idf/mbedtls/mbedtls/tf-psa-crypto/utilities/cmake_install.cmake")
+  include("/home/omer/dev/motorcycleTelemetry/build.clang/esp-idf/mbedtls/mbedtls/tf-psa-crypto/core/cmake_install.cmake")
+  include("/home/omer/dev/motorcycleTelemetry/build.clang/esp-idf/mbedtls/mbedtls/tf-psa-crypto/pkgconfig/cmake_install.cmake")
 
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/omer/dev/motorcycle/build.clang/esp-idf/mbedtls/mbedtls/tf-psa-crypto/install_local_manifest.txt"
+  file(WRITE "/home/omer/dev/motorcycleTelemetry/build.clang/esp-idf/mbedtls/mbedtls/tf-psa-crypto/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

@@ -1,2 +1,2 @@
-source /home/omer/dev/motorcycle/build.clang/gdbinit/symbols
-source /home/omer/dev/motorcycle/build.clang/gdbinit/connect
+source /home/omer/dev/motorcycleTelemetry/build.clang/gdbinit/symbols
+source /home/omer/dev/motorcycleTelemetry/build.clang/gdbinit/connect

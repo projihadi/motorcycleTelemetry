@@ -8,7 +8,7 @@
 #define PIN_NUM_DC 12
 #define PIN_NUM_MOSI 11
 #define PIN_NUM_CLK 10
-#define PIN_NUM_MISO 9
+#define PIN_NUM_MISO 46
 #define PIN_NUM_BCKL -1
 
 #define SCREEN_WIDTH 320
@@ -25,10 +25,12 @@ public:
     auto config = bus.config();
     config.spi_host = SPI2_HOST;
     config.spi_mode = 0;
-    config.freq_write = 40000000;
-    // config.freq_read = 16000000;
+    config.freq_write = 40000000; // Stable sweet spot (27MHz). Drop to 16000000 if wires are long.
+    config.freq_read = 16000000;
     config.spi_3wire = false;
+    config.use_lock = true; // CRITICAL for thread/LVGL safety
     config.dma_channel = SPI_DMA_CH_AUTO;
+
     config.pin_sclk = PIN_NUM_CLK;
     config.pin_mosi = PIN_NUM_MOSI;
     config.pin_miso = PIN_NUM_MISO;
@@ -42,16 +44,18 @@ public:
     // panelConfig.pin_bl = PIN_NUM_BCKL;
     panelConfig.panel_width = SCREEN_WIDTH;
     panelConfig.panel_height = SCREEN_HEIGHT;
-    panelConfig.offset_x = 0;
+    panelConfig.offset_x = -80;
     panelConfig.offset_y = 0;
     panelConfig.dummy_read_pixel = 8;
     panelConfig.dummy_read_bits = 1;
     panelConfig.readable = false;
     panelConfig.invert = false;
-    panelConfig.rgb_order = false;
+    panelConfig.rgb_order = true;
+    panelConfig.offset_rotation = 6;
     panelConfig.dlen_16bit = false;
-    panelConfig.bus_shared = true;
+    panelConfig.bus_shared = false; // Set to true ONLY if sharing SPI pins with an SD card
     panel.config(panelConfig);
+
     setPanel(&panel);
   }
 };

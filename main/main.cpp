@@ -10,10 +10,8 @@
 
 #define BUF_SIZE ((SCREEN_WIDTH * SCREEN_HEIGHT * LV_COLOR_DEPTH / 8) / 10)
 
-static EXT_RAM_BSS_ATTR uint8_t buffer1Data[BUF_SIZE]
-    __attribute__((aligned(32)));
-static EXT_RAM_BSS_ATTR uint8_t buffer2Data[BUF_SIZE]
-    __attribute__((aligned(32)));
+static EXT_RAM_BSS_ATTR uint8_t buffer1Data[BUF_SIZE] __attribute__((aligned(32)));
+static EXT_RAM_BSS_ATTR uint8_t buffer2Data[BUF_SIZE] __attribute__((aligned(32)));
 // static EXT_RAM_BSS_ATTR uint8_t buffer3Data[BUF_SIZE]
 //     __attribute__((aligned(32)));
 
@@ -24,8 +22,7 @@ static lv_draw_buf_t drawBuffer2;
 LGFX_Custom lcd;
 lv_display_t* display;
 
-void flushToDiplay(lv_display_t* display, const lv_area_t* area,
-    uint8_t* pixelMap) {
+void flushToDiplay(lv_display_t* display, const lv_area_t* area, uint8_t* pixelMap) {
   uint32_t w = (area->x2 - area->x1 + 1);
   uint32_t h = (area->y2 - area->y1 + 1);
   if (lcd.getStartCount() == 0) {
@@ -60,11 +57,11 @@ extern "C" void app_main(void) {
   // lv_obj_set_style_bg_color(lv_screen_active(), lv_color_hex(0x000000),
   //     LV_STATE_DEFAULT);
 
-  lv_draw_buf_init(&drawBuffer1, SCREEN_WIDTH, SCREEN_HEIGHT / 10,
-      LV_COLOR_FORMAT_RGB565, 0, buffer1Data, BUF_SIZE);
+  lv_draw_buf_init(&drawBuffer1, SCREEN_WIDTH, SCREEN_HEIGHT / 10, LV_COLOR_FORMAT_RGB565, 0,
+      buffer1Data, BUF_SIZE);
 
-  lv_draw_buf_init(&drawBuffer2, SCREEN_WIDTH, SCREEN_HEIGHT / 10,
-      LV_COLOR_FORMAT_RGB565, 0, buffer2Data, BUF_SIZE);
+  lv_draw_buf_init(&drawBuffer2, SCREEN_WIDTH, SCREEN_HEIGHT / 10, LV_COLOR_FORMAT_RGB565, 0,
+      buffer2Data, BUF_SIZE);
 
   // lv_draw_buf_init(&drawBuffer3, SCREEN_WIDTH, SCREEN_HEIGHT,
   //     LV_COLOR_FORMAT_RGB565, 0, buffer3Data, BUF_SIZE);
@@ -76,8 +73,7 @@ extern "C" void app_main(void) {
 
   // lv_display_set_3rd_draw_buffer(display, &drawBuffer3);
 
-  const esp_timer_create_args_t lvPeriodicTimerArgs = {.callback =
-                                                           &lvglTickCounter,
+  const esp_timer_create_args_t lvPeriodicTimerArgs = {.callback = &lvglTickCounter,
       .arg = NULL,
       .dispatch_method = ESP_TIMER_TASK,
       .name = "periodic_gui",

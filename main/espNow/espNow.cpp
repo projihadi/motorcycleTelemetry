@@ -11,8 +11,7 @@
 static const char* TAG = "Wifi";
 static const uint8_t mac[6] = {0x16, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE};
 
-static void onDataRecieved(const esp_now_recv_info_t* receivedInfo,
-    const uint8_t* data, int len) {
+static void onDataRecieved(const esp_now_recv_info_t* receivedInfo, const uint8_t* data, int len) {
   if (len == sizeof(MotorcycleTelemetry)) {
     MotorcycleTelemetry telemetryData;
     memcpy(&telemetryData, data, sizeof(MotorcycleTelemetry));
@@ -30,8 +29,7 @@ static void onDataRecieved(const esp_now_recv_info_t* receivedInfo,
 
 void initWifi(void) {
   esp_err_t ret = nvs_flash_init();
-  if (ret == ESP_ERR_NVS_NO_FREE_PAGES ||
-      ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
+  if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
     ESP_ERROR_CHECK(nvs_flash_erase());
     ret = nvs_flash_init();
   }

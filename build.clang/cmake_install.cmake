@@ -1,4 +1,4 @@
-# Install script for directory: /home/omer/dev/motorcycle
+# Install script for directory: /home/omer/dev/motorcycleTelemetry
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,18 +34,18 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "xtensa-esp32-elf-clang-objdump")
+  set(CMAKE_OBJDUMP "xtensa-esp32s3-elf-clang-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/omer/dev/motorcycle/build.clang/esp-idf/cmake_install.cmake")
+  include("/home/omer/dev/motorcycleTelemetry/build.clang/esp-idf/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/omer/dev/motorcycle/build.clang/install_local_manifest.txt"
+  file(WRITE "/home/omer/dev/motorcycleTelemetry/build.clang/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -61,6 +61,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/omer/dev/motorcycle/build.clang/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/omer/dev/motorcycleTelemetry/build.clang/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
